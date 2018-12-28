@@ -1,0 +1,1 @@
+{"version":3,"file":"read-all-customers.route.js","sourceRoot":"","sources":["../../../routes/read-all-customers.route.ts"],"names":[],"mappings":";;AAAA,wCAAiC;AAEjC,0BAAiC,GAAG,EAAE,GAAG;IACvC,UAAU,CAAC;QACT,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,EAAE,SAAS,EAAE,aAAE,CAAC,gBAAgB,EAAE,EAAE,CAAC,CAAC;IAC7D,CAAC,EAAE,KAAK,CAAC,CAAC;AACZ,CAAC;AAJD,4CAIC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"news-data.js","sourceRoot":"","sources":["../../news-data.ts"],"names":[],"mappings":";;AAMa,QAAA,IAAI,GAAoB;IACnC;QACE,EAAE,EAAE,CAAC;QACL,MAAM,EAAE,mBAAmB;QAC3B,IAAI,EAAE,qEAAqE;KAC5E;IAED;QACE,EAAE,EAAE,CAAC;QACL,MAAM,EAAE,iBAAiB;QACzB,IAAI,EACF,+EAA+E;KAClF;CACF,CAAC"}

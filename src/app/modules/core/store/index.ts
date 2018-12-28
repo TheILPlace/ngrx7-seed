@@ -9,19 +9,23 @@ import * as fromRouter from '@ngrx/router-store';
 import { storeFreeze } from 'ngrx-store-freeze';
 
 import { environment } from '../../../../environments/environment';
+import * as fromUi from './ui/ui.reducer';
 
 export interface State {
   router: fromRouter.RouterReducerState;
+  ui: fromUi.State;
 
 }
 
 export const INITIAL_STATE: State = {
 
-  router: undefined
+  router: undefined,
+  ui: fromUi.initialState
 };
 
 export const reducers: ActionReducerMap<State> = {
   router: fromRouter.routerReducer,
+  ui: fromUi.reducer,
 };
 
 

@@ -16,6 +16,6 @@ export class UiStateTesterComponent implements OnInit {
       this.userName$ = store.select(fromRoot.getUserName);
     }
     ngOnInit() {
-        this.store.dispatch(new fromUi.UpdateUserName('achi'));
+        this.store.dispatch(new fromUi.UpdateUserName('Dan Mark'));
      }
 }

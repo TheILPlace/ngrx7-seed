@@ -5,6 +5,7 @@ import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../../environments/environment';
 import { UiStateTesterComponent } from './test-ui-state.component';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [UiStateTesterComponent],
@@ -12,7 +13,10 @@ import { UiStateTesterComponent } from './test-ui-state.component';
   imports: [
     CommonModule,
     StoreModule.forRoot(reducers, { metaReducers }),
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    // Connects RouterModule with StoreModule
+    StoreRouterConnectingModule.forRoot(),
+    
   ]
 })
 export class CoreModule { }

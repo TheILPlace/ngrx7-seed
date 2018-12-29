@@ -1,0 +1,17 @@
+Customers Container !
+<div>
+
+    <app-customers-list [customers]="customers$ | async" (customerSelected)="onCustomerSelected($event)">
+        </app-customers-list>
+</div>
+
+<div>
+    <hr>  
+    <app-customer-add (customerAdded)="onCustomerAdded($event)"></app-customer-add>
+</div>
+<div>
+    <hr>
+    <app-customer-details [customer]="selectedCustomer$ | async"></app-customer-details>
+    <br>
+
+</div>

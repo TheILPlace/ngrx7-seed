@@ -38,24 +38,5 @@ export class CustomersDataService {
         this.store.dispatch(new fromCustomersData.Add(customer));
     }
 
-    loadCustomers(): Observable<Customer[]> {
-        const customers = new Array<Customer>();
-
-        const customer = new Customer;
-        customer.id = 1;
-        customer.name = 'John Doe';
-        customer.address = 'the moon';
-
-        const customer2 = new Customer;
-        customer2.id = 2;
-        customer2.name = 'King Solomon';
-        customer2.address = 'Rome';
-
-        customers.push(customer);
-        customers.push(customer2);
-        return of(customers);
-
-
-    }
-
+    
 };

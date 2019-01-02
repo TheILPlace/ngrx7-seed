@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as fromRoot from './store';
 import * as fromUi from './store/ui'
+import { UiSelectorsService } from './store/ui/ui.store.dervice';
 
 @Component({
     selector: 'app-ui-state-tester',
@@ -12,10 +13,11 @@ import * as fromUi from './store/ui'
 export class UiStateTesterComponent implements OnInit {
     userName$: Observable<string>;
  
-    constructor(private store: Store<fromRoot.State>) {
-      this.userName$ = store.select(fromRoot.getUserName);
+    constructor(private uiSelectorsService: UiSelectorsService) {
+      this.userName$ = uiSelectorsService.userName$;
+      //store.select(fromRoot.getUserName);
     }
     ngOnInit() {
-        this.store.dispatch(new fromUi.UpdateUserName('Dan Mark'));
+        this.uiSelectorsService.updateUserName('Dan Mark');
      }
 }

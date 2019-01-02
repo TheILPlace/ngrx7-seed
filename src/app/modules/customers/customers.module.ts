@@ -12,7 +12,8 @@ import { CustomersListComponent } from './pages/customers/components/customers-l
 import { CustomerDetailsComponent } from './pages/customers/components/customer-details.component';
 import { CustomerAddComponent } from './pages/customers/components/customer-add.component';
 
-import { CustomersDataService } from './services/customers.data.service';
+//import { CustomersDataService } from './services/customers.data.service';
+import { CustomersDataStoreService } from './store/data/data.store.service';
 
 @NgModule({
   declarations: [CustomersContainerComponent, CustomersListComponent, 
@@ -24,6 +25,7 @@ import { CustomersDataService } from './services/customers.data.service';
     EffectsModule.forFeature([CustomerDataEffects])
     
   ],
-  providers: [CustomersDataService]
+  providers: [//CustomersDataService, 
+    CustomersDataStoreService]
 })
 export class CustomersModule { }

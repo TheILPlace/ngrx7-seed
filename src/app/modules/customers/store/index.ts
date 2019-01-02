@@ -30,11 +30,13 @@ export const INITIAL_CUSTOMERS_STATE: State = {
  * The createFeatureSelector function selects a piece of state from the root of the state object.
  * This is used for selecting feature states that are loaded eagerly or lazily.
 */
-export const getCustomersFeatureState = createFeatureSelector<State>('customers');
 
-// get the 'data' part of the customer's state
-export const getCustomersDataState = createSelector(getCustomersFeatureState,  state => state.data);
-// expose the inner selectors from the 'data' reducer
-export const getCustomersList = createSelector(getCustomersDataState, fromData.getCustomers);
-export const getIsCustomersLoaded = createSelector(getCustomersDataState, fromData.getIsLoaded);
-export const getSelectedCustomer = createSelector(getCustomersDataState, fromData.getSelectedCustomer);
+
+// export const getCustomersFeatureState = createFeatureSelector<State>('customers');
+
+// // get the 'data' part of the customer's state
+// export const getCustomersDataState = createSelector(getCustomersFeatureState,  state => state.data);
+// // expose the inner selectors from the 'data' reducer
+// export const getCustomersList = createSelector(getCustomersDataState, fromData.getCustomers);
+// export const getIsCustomersLoaded = createSelector(getCustomersDataState, fromData.getIsLoaded);
+// export const getSelectedCustomer = createSelector(getCustomersDataState, fromData.getSelectedCustomer);

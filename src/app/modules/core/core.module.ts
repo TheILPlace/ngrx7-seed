@@ -12,6 +12,7 @@ import { CacheService } from './services/cache.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CustomInterceptor } from './services/custome-http-interceptor';
 import { EffectsModule } from '@ngrx/effects';
+import { UiSelectorsService } from './store/ui/ui.store.dervice';
 
 
 
@@ -32,7 +33,7 @@ export function ConfigLoader(configService: ConfigService) {
     EffectsModule.forRoot([])
     
   ],
-  providers: [HttpService, ConfigService, CacheService,
+  providers: [HttpService, ConfigService, CacheService, UiSelectorsService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: CustomInterceptor ,

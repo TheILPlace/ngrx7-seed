@@ -30,7 +30,7 @@ export function reducer(state = initialState, action: fromUiActions.UiActions): 
 }
 
 
-//  SELECTORS
+// //  SELECTORS
 
-export const getUserName = (state: State) => state.userName;
+// export const getUserName = (state: State) => state.userName;
 

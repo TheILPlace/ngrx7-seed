@@ -34,6 +34,6 @@ export const metaReducers: MetaReducer<State>[] = !environment.production ? [sto
 // SELECTORS
 
 // UI
-export const getUiState = (state: State) => state.ui;
-export const getUserName = createSelector(getUiState, fromUi.getUserName);
+// export const getUiState = (state: State) => state.ui;
+// export const getUserName = createSelector(getUiState, fromUi.getUserName);
 

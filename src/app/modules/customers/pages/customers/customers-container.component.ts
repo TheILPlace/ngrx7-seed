@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomersDataService } from '../../services/customers.data.service';
+//import { CustomersDataService } from '../../services/customers.data.service';
 import { Observable } from 'rxjs';
 import { Customer } from '../../models/customer';
-
+import { CustomersDataStoreService } from '../../store/data/data.store.service';
+ 
 @Component({
   selector: 'app-customers-container',
   templateUrl: './customers-container.html',
@@ -13,10 +14,11 @@ export class CustomersContainerComponent implements OnInit {
   customers$: Observable<Array<Customer>>;
   selectedCustomer$: Observable<Customer>;
 
-  constructor(private customersDataService: CustomersDataService) {
+  //constructor(private customersDataService: CustomersDataService) {
+    constructor(private customersDataService: CustomersDataStoreService) {
 
-    this.customers$ = this.customersDataService.getCustomersList();
-    this.selectedCustomer$ = this.customersDataService.getSelectedCustomer();
+    this.customers$ = this.customersDataService.customersList$;
+    this.selectedCustomer$ = this.customersDataService.selectedCustomer$;
 
    }
 

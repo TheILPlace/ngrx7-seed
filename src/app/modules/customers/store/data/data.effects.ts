@@ -4,7 +4,7 @@ import * as fromDataActions from './data.actions';
 import { Customer } from '../../models/customer';
 import { switchMap, map } from 'rxjs/operators';
 import { of } from 'rxjs';
-import { HttpService } from 'src/app/modules/core/services/http.service';
+import { HttpService } from '../../../core/services/http.service';
 
 @Injectable()
 export class CustomerDataEffects {
